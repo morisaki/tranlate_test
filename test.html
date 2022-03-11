@@ -1,7 +1,243 @@
+
+                <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-  <body>
-    これはUTF8テスト(TST)用のページです。
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index,follow" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="rating" content="general" />
+        <meta name="author" content="" />
+        <meta name="copyright" content="" />
+        <meta name="generator" content="" />
+        <meta name="viewport" content="initial-scale=1.0">
+        <title>多要素認証CASの利用テスト | 名古屋大学 情報連携推進本部</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/custom.css" />
+        <!--[if lte IE 9]>
+            <link rel="stylesheet" href="css/ie9.css" />
+        <![endif]-->
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/jquery.bxslider.min.js"></script>
+<script src="/js/hover.js"></script>
+<script src="/js/jQuery_btn_hover_smartphone.js"></script>
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/common.js"></script>
+<script>
+$(document).ready(function(){
+    var user_kind = $.cookie("user_kind");
+    if (user_kind == null) {
+        user_kind = 'other';
+    }
+    show_contents(user_kind);
+});
+</script>
+<script type="text/javascript">
+$(function(){
+    $(window).scroll(function(){
+        var now = $(window).scrollTop();
+
+        var under = $('body').height() - (now + $(window).height());
+ 
+        if(now > 100 && under > 16){
+            $('#page-top').fadeIn('slow');
+        }else{
+            $('#page-top').fadeOut('slow');
+        }
+    });
+ 
+    $('#move-page-top').click(function(){
+        $('html,body').animate({scrollTop:0},'slow');
+    });
+});
+</script>
+</head>
+    <body>
+        <div id="wrap">     
+                <div id="header">
+                    <div class="inner">
+                        <div class="forSp userSelect">
+                            <select name="selUser" id="selUser">
+                                <option value="other">一般の方</option>
+                                <option value="user">教職員/学生の方</option>
+                                <option value="admin">情報システム管理者</option>
+                            </select>
+                        </div>
+                        <div class="logoBox">
+                            <h2><a href="https://www.nagoya-u.ac.jp/"><img src="/images/nagoya_university_logo.png" alt="情報連携推進本部"></a></h2>
+                            <h1><a href="/ja"><img src="/images/ioch_logo.png" alt="名古屋大学"></a></h1>
+                        </div>
+                        <div class="rightBox">                  
+                            <ul id="useSwitch">
+                                <li class="other"><a href="#" id="other">一般の方</a></li>
+                                <li class="user"><a href="#" id="user">教職員・学生の方</a></li>
+                                <li class="admin"><a href="#" id="admin">情報システム管理者</a></li>
+                            </ul>
+                            <ul id="langSwitch">
+                                <li class="japanese"><a href="/ja/services/nuid/CAS/mfa_cas_authentication_test.html">日本語</a></li>
+                                <li class="english"><a href="/en/services/nuid/CAS/mfa_cas_authentication_test.html">English</a></li>
+                            </ul>
+                             <div class="failureInquiryNumber">
+							<a href="https://qa.icts.nagoya-u.ac.jp/" target="_blank">
+								<img src="/images/failure_inquiry_number.jpg" class="forPc"><img src="/images/s_failure_inquiry_number.jpg" class="forSp">
+							</a>
+							<br>
+							<a href="/ja/information/trouble/">
+								<img src="/images/trouble_link.png" alt="障害情報" class="forPc"><img src="/images/s_trouble_link.png" alt="障害情報" class="forSp">
+							</a>
+							<span class="tel-link" class="forSp"></span>
+                            <form id="cse-search-box" action="https://google.com/cse">
+                            <input type="hidden" name="cx" value="faf8db0f0604c6ca0" />
+                            <input type="hidden" name="ie" value="UTF-8" />
+                            <input type="text" name="q" size="20" placeholder="Googleカスタム検索" />
+                            <input type="submit" name="sa" value="検索">
+                            </form>
+                            </div>
+                        </div>
+                        <div class="gmenu">
+                            <ul id="gmenu">
+                                <li class="gm_01"><div class="menuWrap"><a href="/ja/">情報連携推進本部</a></div></li>
+                                <li class="gm_02"><div class="menuWrap"><a href="/ja/center/">情報基盤センター</a></div></li>
+                                <li class="gm_03"><div class="menuWrap"><a href="/ja/strategy/">情報戦略室</a></div></li>
+                                <li class="gm_05"><div class="menuWrap"><a href="/ja/security_office/">情報セキュリティ室</a></div></li>
+                                <li class="gm_04"><div class="menuWrap"><a href="/ja/media/">情報メディア教育システム</a></div></li>
+                                <li class="gm_06"><div class="menuWrap"><a href="/ja/services/">情報サービス一覧</a></div></li>
+                            </ul>
+                        </div>
+                    </div><!--inner-->
+                </div><!--headerここまで-->
+
+
+                <div id="breadcrumb" class="clearfix">
+                    <ol class="breadcrumb">
+                        <li><a href="/">ホーム</a></li>
+<li><a href="/ja/services/">情報サービス一覧</a></li>
+<li><a href="/ja/services/nuid/">名古屋大学ID</a></li>
+<li><a href="/ja/services/nuid/CAS/">CASによるシングルサインオン</a></li>
+<li class="active">多要素認証CASの利用テスト</li>
+                    </ol>
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <div class="icts_inner common_inner">
+                            <h1 id="title">多要素認証CASの利用テスト</h1>
+                            <link href="./imgFrame.css" rel="stylesheet" />
+
+<p>本ページの内容を、動画で説明したものも準備しております。ぜひご覧ください<br />
+ <a href="https://nuvideo.media.nagoya-u.ac.jp/embed/a20da00653240ce7d18069824903aa2d97cf361d">【動画】多要素認証CASの利用テスト</a><br />
+ <a href="https://nuvideo.media.nagoya-u.ac.jp/embed/20a4dbe9628bd06466ab13363159ec1c219789ab">【英語版-動画】多要素認証CASの利用テスト</a></p>
+
+<p>多要素認証CASの利用のテスト用に、
+<a href="https://auth-mfa-check.icts.nagoya-u.ac.jp/phpCasClient/">多要素認証CAS認証テストページ</a>
+を準備してあります。</p>
+
+<h2>利用テストの手順</h2>
+
+<ul>
+  <li><a href="https://auth-mfa-check.icts.nagoya-u.ac.jp/phpCasClient/">多要素認証CAS認証テストページ</a>
+に行くと、まず、名大IDとパスワードの入力を求められます。
+    <ul>
+      <li>すでにCAS側で名大IDとパスワードが受け付けられている場合、
+いきなり2要素目の認証コード(6桁の数字)の入力を求められる点に注意して下さい。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/ja/services/nuid/CAS/mfa_cas_check1.png" alt="多要素認証CAS認証テストページ 名大ID/パスワード入力" /></p>
+
+<ul>
+  <li>名大IDとパスワードが正しかった場合、2要素目の認証コード(6桁の数字)の入力を求められます。</li>
+  <li>手元の認証アプリやハードウェアトークンの認証コードの数字を見て、数字を入力して下さい。
+    <ul>
+      <li>前後の時間の数字も受け付ける設定をしていますので、
+入力中や入力後に数字が変わってしまった場合でも、そのまま認証を進めて下さい。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/ja/services/nuid/CAS/mfa_cas_check2.png" alt="多要素認証CAS認証テストページ 認証コード入力" /></p>
+
+<ul>
+  <li>認証コード入力による認証が成功した場合、以下の認証成功を示すページに移ります。
+    <ul>
+      <li>これで利用テストは終わりですので、ページを閉じて下さい。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/ja/services/nuid/CAS/mfa_cas_check3.png" alt="多要素認証CAS認証テストページ 認証成功" /></p>
+
+<ul>
+  <li>認証が失敗した場合は以下のページが表示されます。</li>
+  <li>再度、表示されている認証コードを入力して下さい。
+    <ul>
+      <li>何度も失敗する場合、下方の「認証がうまくいかない場合」の各項目を確認して下さい。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/ja/services/nuid/CAS/mfa_cas_check4.png" alt="多要素認証CAS認証テストページ 認証失敗" /></p>
+
+<h2>認証がうまくいかない場合</h2>
+
+<ul>
+  <li>認証アプリを動かしている端末の時間がずれている<br />
+→端末の時間を正確な時間に合わせて下さい</li>
+  <li>間違った認証シードを登録している<br />
+→再度、シード登録からやりなおして下さい</li>
+  <li>ハードウェアトークンの時間が大幅にずれている<br />
+→ハードウェアトークンの利用申請を再度やり直した上、登録時に相談して下さい</li>
+</ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footerBase">
+                    <div id="footer" class="inner">
+                        <h2><a href="/"><img src="/images/nagoya_university_foot_logo.jpg" alt="名古屋大学"></a></h2>
+                        <h1><a href="/"><img src="/images/ioch_foot_logo.jpg" alt="情報連携推進本部"></a></h1>
+                        <div class="content ftMenu forPc">
+                            <dl class="footMenu">
+                                <dt><a href="/ja/">トップページ</a></dt>
+                                <dt><a href="/ja/strategy/masterplan/">情報環境マスタープラン</a></dt>
+                                <dt><a href="/ja/sc/">スーパーコンピュータ</a></dt>
+                                <dt><a href="/ja/organization/">本部紹介</a></dt>
+                                <dd class="subMenu"><a href="/ja/strategy/">情報戦略室</a></dd>
+                                <dd class="subMenu"><a href="/ja/security_office/">情報セキュリティ室</a></dd>
+                                <dd class="subMenu"><a href="/ja/center/">情報基盤センター</a></dd>
+                                <dd class="subMenu"><a href="/ja/media/">情報メディア教育システム</a></dd>
+                            </dl>
+                            <dl class="footMenu mainMenu">
+                                <dt><a href="/ja/services/">情報サービス一覧</a></dt>
+                                <dd class="subMenu"><a href="/ja/services/portal/">名古屋大学ポータル</a></dd>
+                                <dd class="subMenu"><a href="/ja/services/nuid/">名古屋大学ID</a></dd>
+                                <dd class="subMenu"><a href="/ja/services/nuwnet/">大学無線ネットワーク (NUWNET)</a></dd>
+                                <dd class="subMenu"><a href="/ja/services/numail/">全学メールサービス</a></dd>
+                                <dd class="subMenu"><a href="/ja/services/nuss/">教育研究ファイルサービス (NUSS)</a></dd>
+                                <dd class="subMenu"><a href="https://ct.nagoya-u.ac.jp/" target="_blank">教育学習支援システム (NUCT)</a></dd>
+                                <dd class="subMenu"><a href="https://sam.icts.nagoya-u.ac.jp/" target="_blank">ソフトウェア資産管理 (SAM)</a></dd>
+                            </dl>
+                            <dl class="footMenu mainMenu">
+                                <dt><a href="/ja/security/">情報セキュリティ</a></dt>
+                                <dd class="subMenu"><a href="/ja/security/policy.html">セキュリティポリシー</a></dd>
+                                <dd class="subMenu"><a href="/ja/security/guideline.html">セキュリティガイドライン</a></dd>
+                                <dt><a href="/ja/information/">お知らせ一覧</a></dt>
+                                <dt><a href="/ja/helpdesk.html">ITヘルプデスク</a></dt>
+                                <dt><a href="/ja/link.html">リンク集</a></dt>
+                                <dt><a href="/ja/pub/">公開情報</a></dt>
+                                <dt><a href="/nu-only/ja/">学内情報</a></dt>
+                            </dl>
+                        </div>
+                        <div id="footerText">
+                            Copyright (C) 2018 Nagoya University ICTS. ALL Rights Reserved.<br />サービスに関するご質問などは <a href=/ja/helpdesk.html>ITヘルプデスク</a>にお願いします。
+                        </div>
+                    </div><!--footer Innerここまで-->
+                </div><!--footerBaseここまで-->
+                <div id="page-top" class="forSp">
+                    <p class="forSp"><a id="move-page-top">▲</a></p>
+                </div>
+        </div><!--wrapここまで-->
+    </body>
 </html>
