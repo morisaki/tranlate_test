@@ -12,7 +12,7 @@
         <meta name="copyright" content="" />
         <meta name="generator" content="" />
         <meta name="viewport" content="initial-scale=1.0">
-        <title>多要素認証CASの利用テスト | 名古屋大学 情報連携推進本部</title>
+        <title>機構アカウント(THERS account)の運用開始について | 名古屋大学 情報連携推進本部</title>
         <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="/css/custom.css" />
@@ -76,17 +76,12 @@ $(function(){
                                 <li class="admin"><a href="#" id="admin">情報システム管理者</a></li>
                             </ul>
                             <ul id="langSwitch">
-                                <li class="japanese"><a href="/ja/services/nuid/CAS/mfa_cas_authentication_test.html">日本語</a></li>
-                                <li class="english"><a href="/en/services/nuid/CAS/mfa_cas_authentication_test.html">English</a></li>
+                                <li class="japanese"><a href="/ja/services/thersac/">日本語</a></li>
+                                <li class="english_disable"><a>English</a></li>
                             </ul>
-                             <div class="failureInquiryNumber">
-							<a href="https://qa.icts.nagoya-u.ac.jp/" target="_blank">
-								<img src="/images/failure_inquiry_number.jpg" class="forPc"><img src="/images/s_failure_inquiry_number.jpg" class="forSp">
-							</a>
-							<br>
-							<a href="/ja/information/trouble/">
-								<img src="/images/trouble_link.png" alt="障害情報" class="forPc"><img src="/images/s_trouble_link.png" alt="障害情報" class="forSp">
-							</a>
+                            <div class="failureInquiryNumber failureInquiryNumberThers">
+                                <br>
+                                <a href="/ja/information/trouble/"><img src="/images/trouble_link.png" alt="障害情報"></a>
 							<span class="tel-link" class="forSp"></span>
                             <form id="cse-search-box" action="https://google.com/cse">
                             <input type="hidden" name="cx" value="faf8db0f0604c6ca0" />
@@ -114,82 +109,198 @@ $(function(){
                     <ol class="breadcrumb">
                         <li><a href="/">ホーム</a></li>
 <li><a href="/ja/services/">情報サービス一覧</a></li>
-<li><a href="/ja/services/nuid/">名古屋大学ID</a></li>
-<li><a href="/ja/services/nuid/CAS/">CASによるシングルサインオン</a></li>
-<li class="active">多要素認証CASの利用テスト</li>
+<li class="active">機構アカウント(THERS account)の運用開始について</li>
                     </ol>
                 </div>
                 <div class="content">
                     <div class="inner">
                         <div class="icts_inner common_inner">
-                            <h1 id="title">多要素認証CASの利用テスト</h1>
-                            <link href="./imgFrame.css" rel="stylesheet" />
+                            <h1 id="title">機構アカウント(THERS account)の運用開始について</h1>
+                            <!-- Start of ictsthers Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=52c24010-9d33-45bf-8432-307b1cee3008">
+</script>
 
-<p>本ページの内容を、動画で説明したものも準備しております。ぜひご覧ください<br />
- <a href="https://nuvideo.media.nagoya-u.ac.jp/embed/a20da00653240ce7d18069824903aa2d97cf361d">【動画】多要素認証CASの利用テスト</a><br />
- <a href="https://nuvideo.media.nagoya-u.ac.jp/embed/20a4dbe9628bd06466ab13363159ec1c219789ab">【英語版-動画】多要素認証CASの利用テスト</a></p>
+<!-- End of ictsthers Zendesk Widget script -->
 
-<p>多要素認証CASの利用のテスト用に、
-<a href="https://auth-mfa-check.icts.nagoya-u.ac.jp/phpCasClient/">多要素認証CAS認証テストページ</a>
-を準備してあります。</p>
+<script type="text/javascript">
+document.write("<P><A href=https://translate.google.com/translate?sl=ja&tl=en&u="+location.href+" target=_top>Click here to translate this page to English using Google translation.</A>");
+</script>
 
-<h2>利用テストの手順</h2>
+<h1><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/Information/index.html">新着情報</a></h1>
+<p><span style="color: red; ">2022.2.7</span><a href="/ja/services/thersac/thers_du_plan_20211207.pdf">　東海国立大学機構DU構想実現に向けた名大情報システム刷新移行ガイドの日本語版を更新しました</a><br />
+<span style="color: red; ">2021.10.4</span><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/Information/20211004_spam.html">　機構メール(THERS emailの迷惑メール判定につきまして</a><br />
+<span style="color: red; ">2021.10.4</span><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/Information/20211004_gakusei.html">　学生の皆さんへ</a><br />
+<span style="color: red; ">2021.9.7</span><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/NU_information_system_migration_guide.pdf">　東海国立大学機構DU構想実現に向けた名大情報システム刷新移行ガイドの英語版を掲載しました　“Towards the Realization of the “THERS DU Plan” NU Information System Redesign Migration Guide” in English has been posted.</a><br />
+<span style="color: red; ">2021.9.6</span><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/Information/20210906_seikyo_help.html">　名大生協において対面での問い合わせ窓口を開設しました</a></p>
 
-<ul>
-  <li><a href="https://auth-mfa-check.icts.nagoya-u.ac.jp/phpCasClient/">多要素認証CAS認証テストページ</a>
-に行くと、まず、名大IDとパスワードの入力を求められます。
-    <ul>
-      <li>すでにCAS側で名大IDとパスワードが受け付けられている場合、
-いきなり2要素目の認証コード(6桁の数字)の入力を求められる点に注意して下さい。</li>
-    </ul>
+<h1>名古屋大学での情報システムへのログインについて</h1>
+
+<p>名古屋大学では2023年度半ばを目処に徐々に情報システムの更新を行っています。<br />
+それまでには名大IDによるログインと機構アカウントによる認証の2つが並列的に使われます。<br />
+名大IDを用いた「CAS認証」(NUCT, 名大ポータルへのログインに使われます）は、2022/2/24から多要素認証が必要となります。</p>
+
+<p>名大IDを用いた「CAS認証」については、<a href="https://icts.nagoya-u.ac.jp/ja/services/nuid/CAS/index.html">こちら</a>を参照してください。</p>
+
+<p>機構アカウントについて、以下の案内を参照してください。</p>
+
+<h1>機構アカウントの運用を開始いたしました</h1>
+
+<div style="color:red;font-size:x-large;font-weight:bold;padding:8px;">
+ 2021年7月16日（金）から，東海国立大学機構としてMicrosoft 365が導入されました．学生・教職員の方へ機構アカウントが配布され，利用を開始いたしました．
+ </div>
+
+<p><a href="#stu">学生はこちらから</a><br />
+<a href="#facu">教職員はこちらから</a></p>
+
+<p><a name="sty"></a></p>
+
+<h1>学生はこちらから</h1>
+
+<p>■ 機構アカウント　利用の流れ</p>
+<ol>
+  <li>
+    <p><a href="https://icts.nagoya-u.ac.jp/ja/services/thersaccount/" target="_blank">機構アカウント入手ページ</a>の手順に従い機構アカウントと初期パスワードを入手します．<br />
+  注）機構アカウントの入手には名大IDとパスワードが必要となります．</p>
   </li>
-</ul>
-
-<p><img src="/ja/services/nuid/CAS/mfa_cas_check1.png" alt="多要素認証CAS認証テストページ 名大ID/パスワード入力" /></p>
-
-<ul>
-  <li>名大IDとパスワードが正しかった場合、2要素目の認証コード(6桁の数字)の入力を求められます。</li>
-  <li>手元の認証アプリやハードウェアトークンの認証コードの数字を見て、数字を入力して下さい。
-    <ul>
-      <li>前後の時間の数字も受け付ける設定をしていますので、
-入力中や入力後に数字が変わってしまった場合でも、そのまま認証を進めて下さい。</li>
-    </ul>
+  <li>
+    <p><a href="https://icts.nagoya-u.ac.jp/ja/services/thersaccount/ms365start.html">手順書</a>に沿って機構アカウントを登録します．<br />
+  機構アカウントではセキュリティ強化のため，多要素認証の利用を推奨しています．<br />
+  PCとスマートフォン，タブレットをお持ちの方は事前に準備ください．<br />
+  すでにMicrosoftアカウントを登録されていて，サインインしたままの方は一度ブラウザからサインアウトして作業を行ってください．</p>
   </li>
+</ol>
+
+<p>■ サービス利用法方法</p>
+<ul>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersoffice365/">Microsoft Office 365　デスクトップアプリ</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersmail/">メール</a></li>
 </ul>
 
-<p><img src="/ja/services/nuid/CAS/mfa_cas_check2.png" alt="多要素認証CAS認証テストページ 認証コード入力" /></p>
+<!--
+1. <a href="https://account.icts.nagoya-u.ac.jp/" target="_blank">機構アカウント通知ページ</a>で，機構アカウントと初期パスワードを入手(ログインには名大IDでの認証が必要)します．  
+
+1. 機構アカウント通知ページ（準備中：，7/16の午後３時までに本ページに掲載予定ですが，作業のスケジュールにより前後する可能性もあります．）で，機構アカウントと初期パスワードを入手(ログインには名大IDでの認証が必要)します．
+1. <a href="https://www.office.com/" target="_blank">MS365ポータル</a>で，入手した機構アカウントと初期パスワードでサインイン．安全の為，パスワード変更と多要素認証有効化も忘れずに．  
+1. 新しい機構情報サービスがご利用できます
+    1. Office365包括ライセンス(名大学生、教職員は無料でデスクトップOfficeを利用できます)  
+    1. (以下用意ができ次第、様々なサービスをご案内します)  
+--->
+
+<table class="grid_table stretch_table">
+  <tbody>
+    <tr>
+      <td>今年度の新入生<br />生協でOffice365を購入した学生</td>
+      <td>生協で購入したライセンスは2021年9月27日で認証切れとなっております。上記手順に沿って機構アカウントを入手していただき，<a href="https://icts.nagoya-u.ac.jp/ja/services/thersoffice365/#accountcheck"><u>「動作確認」</u></a>のとおり再認証を行ってください．</td>
+    </tr>
+    <tr>
+      <td>上記以外の学生             </td>
+      <td>機構アカウントでOffice 365デスクトップアプリが利用可能になりました．</td>
+    </tr>
+    <tr>
+      <td>全員</td>
+      <td>機構アカウントでのTeamsが利用可能になりました．</td>
+    </tr>
+  </tbody>
+</table>
 
 <ul>
-  <li>認証コード入力による認証が成功した場合、以下の認証成功を示すページに移ります。
-    <ul>
-      <li>これで利用テストは終わりですので、ページを閉じて下さい。</li>
-    </ul>
+  <li>その他のサービス（NUCT等）は順次機構アカウントでの利用に切り替わっていきますが，別途ご案内します．</li>
+  <li>＠○○.nagoya-u.ac.jp および ＠nagoya-u.jp 形式のメールアカウントは当面利用できます.移行については、別途ご案内いたします．</li>
+</ul>
+
+<p><a name="facu"></a></p>
+
+<h1>教職員はこちらから</h1>
+
+<p>■ 機構アカウント　利用の流れ</p>
+<ol>
+  <li>
+    <p><a href="https://icts.nagoya-u.ac.jp/ja/services/thersaccount/" target="_blank">機構アカウント入手ページ</a>の手順に従い機構アカウントと初期パスワードを入手します．<br />
+  注）機構アカウントの入手には名大IDとパスワードが必要となります．</p>
   </li>
-</ul>
-
-<p><img src="/ja/services/nuid/CAS/mfa_cas_check3.png" alt="多要素認証CAS認証テストページ 認証成功" /></p>
-
-<ul>
-  <li>認証が失敗した場合は以下のページが表示されます。</li>
-  <li>再度、表示されている認証コードを入力して下さい。
-    <ul>
-      <li>何度も失敗する場合、下方の「認証がうまくいかない場合」の各項目を確認して下さい。</li>
-    </ul>
+  <li>
+    <p><a href="https://icts.nagoya-u.ac.jp/ja/services/thersaccount/ms365start.html">手順書</a>に沿って機構アカウントを登録します．<br />
+  機構アカウントではセキュリティ強化のため，多要素認証の利用を推奨しています．<br />
+  PCとスマートフォン，タブレットをお持ちの方は事前に準備ください．<br />
+  すでにMicrosoftアカウントを登録されていて，サインインしたままの方は一度ブラウザからサインアウトして作業を行ってください．</p>
   </li>
+</ol>
+
+<p>■ サービス利用法方法</p>
+<ul>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersoffice365/">Microsoft Office 365　デスクトップアプリ</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersmail/">メール</a></li>
 </ul>
 
-<p><img src="/ja/services/nuid/CAS/mfa_cas_check4.png" alt="多要素認証CAS認証テストページ 認証失敗" /></p>
-
-<h2>認証がうまくいかない場合</h2>
+<table class="grid_table stretch_table">
+  <tbody>
+    <tr>
+      <td>生協からライセンスを買った(nagoya-u.jp テナントからライセンスを受けている)」人</td>
+      <td>機構アカウントでOffice 365デスクトップアプリのライセンス認証を2021年9月27日までに行ってください．</td>
+    </tr>
+    <tr>
+      <td>上記以外の教職員</td>
+      <td>現時点で新たに行う作業はありません．</td>
+    </tr>
+  </tbody>
+</table>
 
 <ul>
-  <li>認証アプリを動かしている端末の時間がずれている<br />
-→端末の時間を正確な時間に合わせて下さい</li>
-  <li>間違った認証シードを登録している<br />
-→再度、シード登録からやりなおして下さい</li>
-  <li>ハードウェアトークンの時間が大幅にずれている<br />
-→ハードウェアトークンの利用申請を再度やり直した上、登録時に相談して下さい</li>
+  <li>その他のサービス（NUCT等）は順次機構アカウントでの利用に切り替わっていきますが，別途ご案内します．</li>
+  <li>＠○○.nagoya-u.ac.jp および ＠nagoya-u.jp 形式のメールアカウントは当面利用できます.移行については、別途ご案内いたします．</li>
+  <li>Teamsは当面の名大MS365ID（nagoya.taro@a0.nagoya-u.jp）でご利用ください．移行については，別途ご案内いたします．</li>
 </ul>
+
+<h1><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html">機構アカウント総合案内</a></h1>
+
+<ul>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#outline">はじめに</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#THERSaccount">機構アカウント(新アカウント）について</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#Office365address">Office 365アドレス（旧アカウント）の取り扱い</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#services">機構アカウントでできること</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#email">電子メールについて</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/thersmigration/">Microsoft 365サービスの移行方法（OneDriveやTeamsなど）</a></li>
+  <li><a href="https://icts.nagoya-u.ac.jp/ja/services/ms365complicense/">Microsoft包括ライセンス契約について</a>
+<!--  - [各種サービスの移行について（OneDriveやTeamsなど）](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#migration) --></li>
+</ul>
+
+<!--
+
+- [機構アカウント総合案内](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html)  
+  - [はじめに](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#outline)
+  - [機構アカウントについて](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#THERSaccount)
+  - [機構アカウントの入手方法](https://icts.nagoya-u.ac.jp/ja/services/thersaccount/#howtoget)
+  - [機構アカウントを使った情報サービス利用開始方法](https://icts.nagoya-u.ac.jp/ja/services/thersaccount/ms365start.html)
+  - [Office 365アドレス（旧アカウント）の取り扱い](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#Office365address)
+  - [機構アカウントでできること](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#services)
+  - [電子メールについて](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#email)
+  - [各種サービスの移行について（OneDriveやTeamsなど）](https://icts.nagoya-u.ac.jp/ja/services/thersac/THERS-account.html#migration)
+--->
+
+<h1>よくある質問　お問合せ</h1>
+
+<ul>
+  <li><a href="https://thersac.icts.nagoya-u.ac.jp" target="_blank">よくある質問</a></li>
+  <li><a href="https://thersac.icts.nagoya-u.ac.jp/hc/ja/requests/new" target="_blank">お問合せフォーム</a></li>
+  <li>メール <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#108;&#112;&#064;&#105;&#099;&#116;&#115;&#046;&#110;&#097;&#103;&#111;&#121;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;">&#104;&#101;&#108;&#112;&#064;&#105;&#099;&#116;&#115;&#046;&#110;&#097;&#103;&#111;&#121;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;</a><br /> 
+上記フォームもしくはメールでの問い合わせが困難な場合は名大生協において対面対応を行っております.<br />
+ただしその場での回答が困難な場合や時間帯によっては混みあっている場合がありますこと,ご了承ください.<br />
+北部購買専門カウンター　平日10:00-16:00<br />
+南部生協プラザ　　　　　平日11:00-14:00<br />
+医学部購買　　　　　　　平日11:00-15:00<br /></li>
+</ul>
+
+<!--
+【年末年始の問い合わせ窓口対応のお知らせ】<br>
+ 2021/12/28(火)から2022/1/4(火)まで年末年始の休業期間のためお問い合わせ対応を休止いたします。<br>
+ 上記期間中にお問い合わせフォームにお送りいただいたお問い合わせには2022/1/5 水 以降にご連絡させていただきます。<br>
+ ご迷惑をおかけしますが、ご了承くださいますよう、よろしくお願いいたします。<br>
+ -->
+
+<h1>東海国立大学機構DU構想実現に向けた名大情報システム刷新移行ガイド</h1>
+
+<p><a href="/ja/services/thersac/thers_du_plan_20211207.pdf">東海国立大学機構DU構想実現に向けた名大情報システム刷新移行ガイド</a> <font color="Red">update 2021.12.7</font> <a href="/ja/services/thersac/NU_information_system_migration_guide.pdf">（English）</a>　</p>
+
 
                         </div>
                     </div>
@@ -241,3 +352,5 @@ $(function(){
         </div><!--wrapここまで-->
     </body>
 </html>
+
+
